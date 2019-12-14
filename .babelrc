@@ -1,0 +1,33 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "debug": false, // turn on to see which polyfills are applied
+      "corejs": 3,
+      "useBuiltIns": "entry" // Don't use `useBuiltIns: 'usage'` since it's still experimental
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    [
+      "babel-plugin-styled-components",
+      {
+        "minify": false,
+        "ssr": false
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "minify": true,
+            "ssr": false,
+            "displayName": false
+          }
+        ]
+      ]
+    }
+  }
+}
