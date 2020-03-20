@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist",
     "sourceMap": true,
+    "resolveJsonModule": true,
     "strict": true,
     "target": "ESNext",
     "jsx": "react",
